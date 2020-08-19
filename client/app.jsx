@@ -17,11 +17,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.fetchId(1);
+    this.fetchId(window.location.pathname === '/' ? '/1' : window.location.pathname);
   }
 
   fetchId(id) {
-    axios.get(`/api/midpageimages/${id}`)
+    axios.get(`/api/midpageimages${id}`)
       .then(({ data }) => {
         const urls = data.urls.map((i) => i.url);
         const descriptions = data.descriptions.map((j) => j);
@@ -42,7 +42,7 @@ class App extends Component {
           urls={urls}
           descriptions={descriptions}
         />
-        <IdFetcher fetchId={this.fetchId} />
+        {/* <IdFetcher fetchId={this.fetchId} /> */}
       </div>
     );
   }

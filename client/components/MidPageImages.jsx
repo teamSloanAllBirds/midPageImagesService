@@ -4,7 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const MidTable = styled.table`
-  border-spacing: 0 5vw;
+  border-spacing: 0 10vw;
   width: 100%
 `;
 
@@ -14,15 +14,14 @@ const RowTable = styled.table`
 
 const BiggerDiv = styled.div`
   overflow: hidden;
-  max-height: 300px;
-  width: 40vw;
-  max-width: 400px;
+  height: 30vw;
+  width: 45vw;
 `;
 
 const SmallerDiv = styled.div`
   height: 100%;
-  width: 35vw;
-  max-width: 350px;
+  width: 40vw;
+  max-width: 550px;
   `;
 
 const TextContainer = styled.div`
@@ -39,7 +38,7 @@ const SubtextOne = styled.div`
 
 const SubtextTwo = styled.div`
   font-family: 'Meticula-Bold';
-  font-size: 20px;
+  font-size: 25px;
   margin-bottom: 20px;
 `;
 
